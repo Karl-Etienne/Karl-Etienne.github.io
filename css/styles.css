@@ -47,8 +47,23 @@ NOTE: Vaut mieux utiliser les Classes car tu peux appliquer une classe plusieurs
 ID est plus spécifique que les Classe qui est plus spécifique que par l'Élément. CSS va toujours appliquer l'élément qui "fitte" le plus spécifique
 */
 
-*
+.casperProblems
 {
-	align-self: center;
-	padding: 8px;
+	background-color: slategray;
+	color:silver;
+	width: 300px;
+	height: 40px;
+	margin: 8px;
+	border-radius: 8px;
+}
+
+.answerBox
+{
+	width: 600px;
+	height: 200px;
+}
+
+#toAnswer
+{
+	visibility: hidden;
 }

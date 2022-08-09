@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Scenario</title>
+        
+        <link rel="stylesheet" href=".\css\styles.css">
+    </head>
+	
+	<body>
+        
+        <h2>This is the situation</h2>
+
+        <button id="startButton" onclick="beginAnswer()">Click to start</button>
+        <div>
+            <time id="timer" style="visibility: hidden">-:--</time>
+        </div>
+        <div>
+            <time id="wordsPerMin" style="visibility: hidden">Mots par minutes: </time>
+        </div>
+
+        <div id="toAnswer">
+            <h3>Question 1</h3>
+            <p>
+                Blablabla Mr.Freeman?
+            </p>
+            <textarea class="answerBox" readonly="true"></textarea>
+
+            <h3>Question 2</h3>
+            <p>
+                Blablabla Mr.Freeman?
+            </p>
+            <textarea class="answerBox" readonly="true"></textarea>
+
+            <h3>Question 3</h3>
+            <p>
+                Blablabla Mr.Freeman?
+            </p>
+            <textarea class="answerBox" readonly="true"></textarea>
+        </div>
+	</body>
+
+    <script src='./scripts/src.js'></script>
+</html>
