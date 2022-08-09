@@ -1,4 +1,4 @@
-var timer = 30
+var timer = 300
 var ellapsed = -1
 var timerInt
 var wpmInt
