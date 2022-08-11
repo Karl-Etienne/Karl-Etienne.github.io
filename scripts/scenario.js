@@ -83,3 +83,12 @@ function beginAnswer()
 
     toVisibleToggle = false;
 }
+
+function getScen()
+{
+    return sessionStorage.getItem("currentScenario");
+}
+function makePage()
+{
+    document.title = "Scenario "+getScen()
+}
