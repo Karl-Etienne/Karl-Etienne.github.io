@@ -90,5 +90,28 @@ function getScen()
 }
 function makePage()
 {
-    document.title = "Scenario "+getScen()
+    const id = getScen();
+    document.title = "Scenario "+id;
+
+    document.getElementById("situation").textContent = scenarios[id].situation;
+    document.getElementById("Q1").textContent = scenarios[id].q1;
+    document.getElementById("Q2").textContent = scenarios[id].q2;
+    document.getElementById("Q3").textContent = scenarios[id].q3;
 }
+
+const scenarios = {
+    99: {
+        situation:"Vieux test",
+        q1: "Blablabla Mr.Freeman",
+        q2: "Blablabla again, Mr.Freeman",
+        q3: "Blablabla one last time... Mr.Freeman"
+        },
+    0: {
+        situation:"Ceci est un problème exemple\
+        qui peut servir à mieux tester\
+        comment fonctionne le site web... Have fun!",
+        q1: "Décrivez une situation où vous avez fait preuve de créativité",
+        q2: "Quel est votre mot favoris dans la dictionnaire? Pourquoi?",
+        q3: "Si vous pouviez coucher avec une amie, le feriez-vous? Expliquez pourquoi c'est une décision épaisse :D"
+        }
+    }

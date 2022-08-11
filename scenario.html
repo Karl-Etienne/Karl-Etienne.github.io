@@ -10,9 +10,9 @@
 	
 	<body onload="makePage()">
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2>This is the situation</h2>
+            <h2 id="situation" style="width:750px; text-align: justify;">null</h2>
 
-            <button id="startButton" onclick="beginAnswer()">Start</button>
+            <button id="startButton" onclick="beginAnswer()">Appuyez pour débuter</button>
         </div>
         
         <div style="display:flex; justify-content: right;">
@@ -25,20 +25,20 @@
 
         <div id="toAnswer">
             <h3>Question 1</h3>
-            <p>
-                Blablabla Mr.Freeman?
+            <p id="Q1">
+                null
             </p>
             <textarea class="answerBox" readonly="true"></textarea>
 
             <h3>Question 2</h3>
-            <p>
-                Blablabla Mr.Freeman?
+            <p id="Q2">
+                null
             </p>
             <textarea class="answerBox" readonly="true"></textarea>
 
             <h3>Question 3</h3>
-            <p>
-                Blablabla Mr.Freeman?
+            <p id="Q3">
+                null
             </p>
             <textarea class="answerBox" readonly="true"></textarea>
         </div>
