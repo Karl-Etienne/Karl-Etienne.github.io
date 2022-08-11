@@ -13,6 +13,19 @@ function timerTick()
 
     document.getElementById('timer').textContent = m+":"+paddedS;
 
+
+    if (timer <= 10)
+    {
+        if (timer % 2 != 0)
+        {
+            document.getElementById('stats').style.backgroundColor = "rgba(139,0,0,0)";
+        }
+        else
+        {
+            document.getElementById('stats').style.backgroundColor = "rgba(139,0,0,255)";
+        }
+    }
+
     if (timer == 0)
     {
         alert("Time's up") 
@@ -27,6 +40,7 @@ function timerTick()
     }
 }
 
+var bestWpm = 0
 function wpmTick()
 {
     var wordCount = 0
@@ -38,7 +52,11 @@ function wpmTick()
         wordCount+=b.value.split(" ").length-1
     }
 
-    document.getElementById('wordsPerMin').textContent = "Mots par minutes: "+(wordCount/(ellapsed/60))
+    var currWpm = (wordCount/(ellapsed/60)).toFixed(2)
+    document.getElementById('wordsPerMin').textContent = currWpm+" mots par minutes"
+
+    if (bestWpm < currWpm){bestWpm = currWpm}
+    document.getElementById('bestPerMin').textContent = bestWpm+" [meilleur]"
 
     if (timer == 0)
     {
@@ -50,8 +68,7 @@ function beginAnswer()
 {
     document.getElementById('toAnswer').style.visibility = "visible";
     document.getElementById('startButton').style.visibility = "collapse"
-    document.getElementById('timer').style.visibility = "visible"
-    document.getElementById('wordsPerMin').style.visibility = "visible"
+    document.getElementById('stats').style.visibility = "visible"
     
 
     timer = timer + 1
