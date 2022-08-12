@@ -18,7 +18,7 @@ function getScen()
 function beginAnswer()
 {
     document.getElementById('toAnswer').style.display = "flex"
-    document.getElementById('startButton').style.visibility = "collapse"
+    document.getElementById('startButtonCont').style.display = "none"
     document.getElementById('stats').style.visibility = "visible"
     
 
@@ -127,7 +127,7 @@ function stopMouseOverEmphasis(button){button.style.color = ""}
 
 const scenarios = {
     99: {
-        situation:"Vieux test",
+        situation:"Viiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieux test",
         q1: "Blablabla Mr.Freeman",
         q2: "Blablabla again, Mr.Freeman",
         q3: "Blablabla one last time... Mr.Freeman"
