@@ -3,44 +3,50 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title></title>
+        <title>null</title>
         
-        <link rel="stylesheet" href=".\css\styles.css">
+        <link rel="stylesheet" href=".\css\main.css">
+        <link rel="stylesheet" href=".\css\scenario.css">
     </head>
 	
 	<body onload="makePage()">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2 id="situation" style="width:750px; text-align: justify;">null</h2>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="margin: 0% 0% 0% 2%; display: flex; flex-direction: column;align-items: center;">
+                <div>
+                    <h1 id="scenarioTitle"></h1>
+                    <h2 id="situation" style="width:71%; text-align: justify;">null</h2>
+                </div>
+    
+                <button id="startButton" onclick="beginAnswer()" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">Appuyez pour débuter</button>
+            </div>
 
-            <button id="startButton" onclick="beginAnswer()">Appuyez pour débuter</button>
-        </div>
-        
-        <div style="display:flex; justify-content: right;">
-            <div id="stats" style="visibility: hidden">
-                <p id="timer" style="font-size: 50px">-:--</p>
-                <p id="wordsPerSec"  style="font-size: 20px; margin: 0px 0px 5px 0px;"></p>
-                <p id="bestPerSec"  style="font-size: 20px; margin: 0px 0px 5px 0px;"></p>
-                <p id="estimPerMin"  style="font-size: 20px; margin: 0px 0px 10px 0px;"></p>
-                <div id="resultBannerBar" style="visibility: collapse; width: 200px; border-width:2px; border-style:dashed"></div>
-                <p id="resultBanner" style="visibility: collapse;margin-bottom: -20px; font-size: 22px">Resultat:</p>
-                <p id="wordsPerMin"  style="visibility: collapse; font-size: 28px">NULL mots par minutes</p>
+            <div style="display:flex; justify-content: right;">
+                <div id="stats" style="visibility: hidden">
+                    <p id="timer" style="font-size: 250%">-:--</p>
+                    <p class="statItem" id="wordsPerSec" ></p>
+                    <p class="statItem" id="bestPerSec"></p>
+                    <p class="statItem" id="estimPerMin"></p>
+                    <div id="resultBannerBar" style="visibility: collapse; width: 85%; border-width:2px; border-style:dashed"></div>
+                    <p id="resultBanner" style="visibility: collapse;margin: 8% 0% 1% 0%; font-size: 150%">Résultat:</p>
+                    <p id="wordsPerMin"  style="visibility: collapse; font-size: 180%">NULL mots par minutes</p>
+                </div>
             </div>
         </div>
-
+        
         <div id="toAnswer">
-            <h3>Question 1</h3>
+            <h3 class="questionHeader">Question 1</h3>
             <p id="Q1">
                 null
             </p>
             <textarea class="answerBox" readonly="true"></textarea>
 
-            <h3>Question 2</h3>
+            <h3 class="questionHeader">Question 2</h3>
             <p id="Q2">
                 null
             </p>
             <textarea class="answerBox" readonly="true"></textarea>
 
-            <h3>Question 3</h3>
+            <h3 class="questionHeader">Question 3</h3>
             <p id="Q3">
                 null
             </p>
