@@ -1,11 +1,11 @@
-var timer = 300
-var ellapsed = -1
+const timerSet = 300
+var timer
+var ellapsed = -1.0
 var timerInt
-var wpmInt
+var wpsInt
 function timerTick()
 {
     timer = timer - 1
-    ellapsed += 1
     
     var m = Math.floor(timer/60)
     var s = Math.floor(timer%60)
@@ -40,27 +40,56 @@ function timerTick()
     }
 }
 
-var bestWpm = 0
-function wpmTick()
+var bestWps = 0
+let samplesPerXSeconds = 20
+var countArr = new Array(samplesPerXSeconds)
+for(var i = 0; i < samplesPerXSeconds; i++){countArr[i] = 0}
+var oldCount = 0
+function wpsTick()
 {
+    ellapsed += 1.0/samplesPerXSeconds
+
     var wordCount = 0
 
     var aBoxes = document.getElementsByClassName('answerBox');
 
     for (b of aBoxes)
     {
-        wordCount+=b.value.split(" ").length-1
+        //Dafuq Javascript ?!?
+        const words = b.value.split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } );
+        wordCount += words.length
     }
 
-    var currWpm = (wordCount/(ellapsed/60)).toFixed(2)
-    document.getElementById('wordsPerMin').textContent = currWpm+" mots par minutes"
+    let delta = wordCount - oldCount
+    if(delta <= 0){delta = 0}
+    oldCount = wordCount
 
-    if (bestWpm < currWpm){bestWpm = currWpm}
-    document.getElementById('bestPerMin').textContent = bestWpm+" [meilleur]"
+    countArr.shift()
+    countArr.push(delta)
+    var sum=0;
+    for(var i in countArr){sum = sum + countArr[i]}
+    
+    var currWps = sum
+    document.getElementById('wordsPerSec').textContent = currWps+" MPS"
+
+    if (bestWps < currWps)
+    {
+        bestWps = currWps
+    }
+    document.getElementById('bestPerSec').textContent = bestWps+" MPS[meilleur]"
+    let estim = ((wordCount/ellapsed)*60).toFixed(2);
+    document.getElementById('estimPerMin').textContent =(estim > 0 ? estim : "---") +" MPM[estimé]"
 
     if (timer == 0)
     {
-        clearInterval(wpmInt)
+        document.getElementById('wordsPerMin').textContent = (wordCount/timerSet*60)+" mots par minutes"
+        
+        document.getElementById('resultBanner').style.visibility = "visible";
+        document.getElementById('resultBannerBar').style.visibility = "visible";
+        document.getElementById('wordsPerMin').style.visibility = "visible";
+
+        clearInterval(wpsInt)
+        console.log(ellapsed)
     }
 }
 
@@ -71,9 +100,9 @@ function beginAnswer()
     document.getElementById('stats').style.visibility = "visible"
     
 
-    timer = timer + 1
+    timer = timerSet + 1
     timerInt = setInterval(timerTick,1000)
-    wpmInt = setInterval(wpmTick,100)
+    wpsInt = setInterval(wpsTick,50)
     
     var aBoxes = document.getElementsByClassName('answerBox');
     for (b of aBoxes)
