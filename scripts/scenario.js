@@ -19,12 +19,16 @@ function beginAnswer()
 {
     document.getElementById('toAnswer').style.display = "flex"
     document.getElementById('startButtonCont').style.display = "none"
+
+    document.getElementById('lastPerMin').textContent = "-.--"+" MPM"
+    document.getElementById('bestPerMin').textContent = "-.--"+" MPM [best]"
+    document.getElementById('meanPerMin').textContent = "-.--"+" MPM [moy]"
     document.getElementById('stats').style.visibility = "visible"
     
 
-    timer = timerSet + 1
-    timerInt = setInterval(timerTick,1000)
-    wpsInt = setInterval(wpsTick,50)
+    timer = timerSet
+    timerInt = setInterval(timerTick,timerTickSet)
+    wpmInt = setInterval(wpmTick,wpmTickSet)
     
     var aBoxes = document.getElementsByClassName('answerBox')
     for (b of aBoxes)
@@ -38,12 +42,15 @@ function beginAnswer()
 
 //5 min = 300 sec
 const timerSet = 300
-const timerTickSet = 1000
-const wpsTickSet = 50
+const MILLISEC_IN_SEC = 1000
+const timerTickInSec = 1
+const timerTickSet = timerTickInSec*MILLISEC_IN_SEC
+const wpmTickInSec = 5
+const wpmTickSet = wpmTickInSec*MILLISEC_IN_SEC
 var timer
 var ellapsed = -1.0
 var timerInt
-var wpsInt
+var wpmInt
 function timerTick()
 {
     timer = timer - 1
@@ -69,18 +76,16 @@ function timerTick()
         }
 
         clearInterval(timerInt)
+        wpmInt = setInterval(wpmTick,1)
     }
 }
 
-var bestWps = 0
-let samplesPerwpsTick = timerTickSet/wpsTickSet
-var countArr = new Array(samplesPerwpsTick)
-for(var i = 0; i < samplesPerwpsTick; i++){countArr[i] = 0}
+var bestPerMin = 0
+var periodsArr = new Array()
+const average = arr => arr.reduce((a, b) => a + b) / arr.length;
 var oldCount = 0
-function wpsTick()
+function wpmTick()
 {
-    ellapsed += 1.0/samplesPerwpsTick
-
     var wordCount = 0
 
     for (b of document.getElementsByClassName('answerBox'))
@@ -90,36 +95,34 @@ function wpsTick()
         wordCount += words.length
     }
 
-    let delta = wordCount - oldCount
-    if(delta <= 0){delta = 0}
-    oldCount = wordCount
-
-    countArr.shift()
-    countArr.push(delta)
-    
-    var currWps=0
-    for(var i in countArr){currWps = currWps + countArr[i]}
-    document.getElementById('wordsPerSec').textContent = currWps+" MPS"
-
-    if (bestWps < currWps)
+    if (timer <= 0)
     {
-        bestWps = currWps
-    }
-
-    document.getElementById('bestPerSec').textContent = bestWps+" MPS [best]"
-    let estim = ((wordCount/ellapsed)*60).toFixed(2)
-    document.getElementById('estimPerMin').textContent =(estim > 0 ? estim : "---") +" MPM [est.]"
-
-    if (timer == 0)
-    {
-        document.getElementById('wordsPerMin').textContent = (wordCount/timerSet*60)+" MPM"
+        document.getElementById('wordsPerMin').textContent = (wordCount/timerSet*60).toFixed(0)+" MPM"
         
         document.getElementById('resultBanner').style.visibility = "visible"
         document.getElementById('resultBannerBar').style.visibility = "visible"
         document.getElementById('wordsPerMin').style.visibility = "visible"
 
-        clearInterval(wpsInt)
+        clearInterval(wpmInt)
+        return
     }
+
+    let delta = wordCount - oldCount
+    oldCount = wordCount
+
+    var lastPerMin = (delta/wpmTickInSec*60)
+    periodsArr.push(lastPerMin)
+    
+    document.getElementById('lastPerMin').textContent = lastPerMin+" MPM"
+
+    if (bestPerMin < lastPerMin)
+    {
+        bestPerMin = lastPerMin
+    }
+
+    document.getElementById('bestPerMin').textContent = bestPerMin+" MPM [best]"
+
+    document.getElementById('meanPerMin').textContent = average(periodsArr).toFixed(0) +" MPM [moy]"
 }
 
 function mouseOverEmphasis(button){button.style.color = "red"}
@@ -127,17 +130,15 @@ function stopMouseOverEmphasis(button){button.style.color = ""}
 
 const scenarios = {
     99: {
-        situation:"Viiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieux test",
+        situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",
-        q2: "Blablabla again, Mr.Freeman",
-        q3: "Blablabla one last time... Mr.Freeman"
+        q2: "Never gonna give you up, never gonna...?",
+        q3: "You ever wonder what the bottom of an avatar shoe looks like?"
         },
     0: {
-        situation:"Ceci est un problème exemple\
-        qui peut servir à mieux tester\
-        comment fonctionne le site web... Have fun!",
-        q1: "Décrivez une situation où vous avez fait preuve de créativité",
-        q2: "Quel est votre mot favoris dans la dictionnaire? Pourquoi?",
-        q3: "Si vous pouviez coucher avec une amie, le feriez-vous? Expliquez pourquoi c'est une décision épaisse :D"
+        situation:"Problème simple pour vous acclimater au site! Vous avez 5 min pour répondre à 3 questions.",
+        q1: "Vrai ou faux? Un vol peut être justifié.",
+        q2: "Donnez-vous de la monnaie aux sans-abris que vous croisez dans la rue? Pourquoi?",
+        q3: "Dans quelle(s) situation(s) pouvons-nous dire que \"la fin justifie les moyens?\""
         }
     }
