@@ -168,6 +168,31 @@ const scenarios = {
         q2: "Que faites vous pour assurer que vos projets se terminent dans les délais prévus?",
         q3: "Le plagiaire devrait faire face à quels types de conséquences selon-vous?"
         },
+    4: {
+        situation:"\"ON EST SURVEILLÉS!\" vous lisez sur une pancarte tenue par un homme sur la bord de la rue. Vous êtes à une lumière rouge. \
+        Depuis votre voiture, vous entendez l'homme crier: \"JETEZ VOS TÉLÉPHONES! LIBÉREZ VOUS DE BIG BROTHER!\" \
+        Vous croisez son regard... Soudainement, il commence à donner des coups de sa pancarte sur votre véhicule!",
+        q1: "Comment réagissez-vous?",
+        q2: "Partagez-vous l'opinion de l'homme?",
+        q3: "Vrai ou faux? En ce moment, au Québec, les troubles de santé mentale sont plus importants que les autres types de problèmes de santé."
+        },
+    5: {
+        situation:"C'est une journée importante au travail: c'est votre évaluation en vue d'une possible promotion! Vous êtes dans \
+        le bureau de votre supérieur. Il débute en vous expliquant qu'il vous avait d'abord offert un emploi dans la compagnie puisqu'il \
+        avait vu en vous un grand potentiel. Il poursuit toutefois en indiquant que ce potentiel ne s'est clairement pas réalisé. Il dit \
+        que vos résultats sont minables, que vous êtes une déception et qu'il en est à deux doigts de vous renvoyer...",
+        q1: "Avez-vous déjà sous-performé? Pour quelle raison?",
+        q2: "Votre employeur devrait-il vous renvoyer ou vous offrir une dernière chance?",
+        q3: "Si vous aviez à renvoyer un employé, comment le feriez-vous?"
+        },
+    6: {
+        situation:"Vous êtes dans votre maison en fin de soirée. Votre partenaire et vous êtes sur le point d'aller vous coucher, mais \
+        en passant devant la porte fermée de la chambre de votre enfant de 16 ans, vous l'entendez dire: \"Osti m'a le tuer! Je te \
+        le jure qu'il va crever!\"",
+        q1: "Entrez-vous dans la chambre pour confronter votre enfant?",
+        q2: "Selon vous, est-ce que la \"liberté d'expression\" permet de dire tout ce que l'on veut?",
+        q3: "Devrions-nous restreindre l'accès aux jeux vidéo \"17 ans et plus\" à des enfants de 15~16 ans? Pourquoi?"
+        },
     99: {
         situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",

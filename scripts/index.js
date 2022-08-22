@@ -2,12 +2,15 @@ function loadContent()
 {
     var scenarios = document.getElementById('newScenarios')
     
-    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">1</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">2</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">3</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">4</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">5</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">6</button></a>')
 
     scenarios = document.getElementById('legacyScenarios')
     
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">1</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">0</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">99</button></a>')
 }
