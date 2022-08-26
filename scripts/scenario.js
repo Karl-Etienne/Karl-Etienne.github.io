@@ -193,6 +193,55 @@ const scenarios = {
         q2: "Selon vous, est-ce que la \"liberté d'expression\" permet de dire tout ce que l'on veut?",
         q3: "Devrions-nous restreindre l'accès aux jeux vidéo \"17 ans et plus\" à des enfants de 15~16 ans? Pourquoi?"
         },
+    7: {
+        situation:"Votre amie vous a invité à un festival de music électronique pour le week-end. C'est trippant! Un \
+        moment donné, votre amie vous dit qu'elle doit passer aux toilettes... Peu de temps après son retour, elle agit de \
+        façon étrange. Elle qui est normalement plus réservée, elle semble soudainement plus énergétique qu'à l'habitude. \
+        Elle vous partage à quel point \"elle se sent bien\" et elle commence à danser avec de purs étrangers autour de vous...",
+        q1: "Est-ce que le changement de comportement de votre amie vous inquiète ou ça vous rassue de la voir si heureuse?",
+        q2: "Si vous étiez en charge du festival, quelles mesures metteriez-vous en place afin de limiter la consommation excessive?",
+        q3: "Vrai ou faux? Toute drogue devrait être illégale. Expliquez votre choix."
+        },
+    8: {
+        situation:"Vous êtes infirmier à l'hôpital. Votre étage est en confinement puisque vous hébergez les patients \
+        positifs à la Covid. La consigne est claire: il est important de revêtir votre ÉPI afin d'éviter la contamination!\
+        En marchant dans le corridor, vous remarquez un collègue dans une chambre qui porte la jaquette, les gants, le masque N95, mais ne\
+         porte pas de lunettes de sécurité...",
+        q1: "Que faites-vous? Pourquoi?",
+        q2: "Décrivez, selon vous, les problèmes pouvant découler de ce type de négligence.",
+        q3: "Êtes-vous trop prudent, pas assez ou juste assez? Pourquoi?"
+        },
+    9: {
+        situation:"Un couple d'amis viennent tout juste de mettre naissance à leur premier enfant. Toutefois, dû à des \
+        complications à l'accouchement, le médecin a averti que l'enfant présentera probablement un retard mental. La mère \
+        vous partage sa grande tristesse. Elle s'était imaginé son enfant en pleine santé, des moments heureux en famille, \
+        une vie normale... Mais maintenant, elle dit sentir un poid énorme sur ses épaules, comme quoi elle devra toujours \
+        gérer les innombrables rendez-vous médicaux et les difficultés quotidiennes de son enfant. Elle énonce même qu'elle \
+        regrette avoir eu l'enfant...",
+        q1: "Selon vous, jusqu'à quel moment est-ce qu'une femme peut faire appel à l'avortement? Pourquoi?",
+        q2: "Si le couple n'arrive visiblement pas à s'occuper de l'enfant, offrirez-vous de prendre en charge l'enfant \
+        d'une manière ou d'une autre?",
+        q3: "Que dites-vous à votre amie afin de l'assister dans sa détresse?"
+        },
+    10: {
+        situation:"De nos jours, il est possible de devoir attendre plus de 2 ans afin d'obtenir un examen de \
+        résonance magnétique en centre hospitalier... Cela peut prendre moins d'une semaine en clinique privée.",
+        q1: "Selon vous, que devrions-nous faire afin de bonifier la qualité des services offert dans le \
+        système de santé publique au Québec?",
+        q2: "Devrions-nous obliger les mieux nantis à payers leurs examens médicaux?",
+        q3: "Pour ou contre un régime national de soins dentaires"
+        },
+    11: {
+        situation:"Vous êtes en grande discussion avec votre voisin. Vous le remercier de bien vouloir s'occuper \
+        de votre demeure durant les 2 semaines où vous serez en vacances à Hawaii. Lorsque vous lui expliquez \
+        que vous profiterez d'un aller direct dans un énorme Boeing 777, la fille adolescente du voisin s'exprime \
+        fortement: \"Donc tu vas brûler tout ce kérosène là juste pour ton p'tit plaisir? Osti d'égoïste! Moi je vais devoir vivre \
+        sur une planète surchauffée et détruite à cause de gens comme toi!\"",
+        q1: "Vous sentiriez-vous mal de faire ce type de voyage suite au commentaire de la jeune fille?",
+        q2: "Quelles actions posez-vous afin de réduire votre impact sur le réchauffement climatique?",
+        q3: "Est-ce qu'un québécois moyen devrait s'inquiéter du moyen de transport qu'il choisit sachant que la Chine \
+        a un impact largement plus important que lui sur le taux de polution généré?"
+        },
     99: {
         situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",
