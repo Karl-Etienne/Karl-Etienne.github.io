@@ -242,6 +242,26 @@ const scenarios = {
         q3: "Est-ce qu'un québécois moyen devrait s'inquiéter du moyen de transport qu'il choisit sachant que la Chine \
         a un impact largement plus important que lui sur le taux de polution généré?"
         },
+    12: {
+        situation:"L'équipement de votre centre multiservices de santé et de services sociaux local est reconnu pour être... \
+        vétuste. Plusieurs appareils sont anciens, mais toujours fonctionnels. Malgré que cela soit souvent rapporté à la\
+        direction, celle-ci répond toujours que \"si le service peut être offert avec l'équipement en place, aucun changement\
+         ne sera apporté\"... Plusieurs patients sont pourtant inquiets de ne pas recevoir le meilleur traitement possible. \
+        Récemment, une famille aisée de la région a annoncé vouloir offrir plusieurs millions de dollars en dons majeurs au courant \
+        des prochaines années afin de mettre à jour l'équipement du centre. Leur seule condition: chaque \
+        patient doit ressortir du centre avec un ballon où il est inscrit \"Merci famille Desétang! Vous m'avez sauvé la vie!\"",
+        q1: "Si vous étiez en charge du dossier, accepteriez-vous l'offre? Pourquoi?",
+        q2: "Devons-nous attendre que l'équipement médical brise avant de le remplacer?",
+        q3: "Pour ou contre la centralisation de la gestion dans le système de santé au Québec?"
+        },
+    13: {
+        situation:"Vous roulez à pleine vitesse sur l'autoroute. La circulation est dense, mais fluide. En approchant d'un viaduc, \
+        vous appercevez une personne qui enjambe la barrière et semble vouloir sauter! La prochaine sortie accessible \
+        se situe à une distance d'environ 8 km.",
+        q1: "Comment réagissez-vous?",
+        q2: "Décrivez une situation stressante sur laquelle vous n'aviez pas le contrôle. Comment avez-vous géré cette situation?",
+        q3: "Si vous étiez plutôt en train de traverser ce viaduc, auriez-vous agi différement?"
+        },
     99: {
         situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",
