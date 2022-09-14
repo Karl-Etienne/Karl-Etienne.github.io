@@ -262,6 +262,23 @@ const scenarios = {
         q2: "Décrivez une situation stressante sur laquelle vous n'aviez pas le contrôle. Comment avez-vous géré cette situation?",
         q3: "Si vous étiez plutôt en train de traverser ce viaduc, auriez-vous agi différement?"
         },
+    14: {
+        situation:"Vous profitez d'une belle journée ensoleillée pour aller marcher au parc près de chez vous. \
+        Sur le bord de la rue, vous appercevez un homme dans une camionnette blanche qui semble discuter avec une jeune fillette \
+        qui jouait seule.",
+        q1: "Est-ce que cette situation vous inquiète? Pourquoi?",
+        q2: "Selon vous, est-ce que les prédateurs sexuels méritent nécessairement la prison ou si uniquement la thérapie suffirait?",
+        q3: "Pour ou contre les gadgets et/ou applications qui permettent aux parents de suivre l'emplacement et les activités de leurs enfants? Pourquoi?"
+        },
+    15: {
+        situation:"Vous êtes le gérant d'une boutique spécialisée en vente d'articles de sport. En début d'après-midi, vous \
+        recevez un appel de l'employé qui devait faire le quart de soir. Il vous annonce qu'il ne pourra pas rentrer puisqu'il vit \
+        un deuil. En le questionnant, il vous avoue être boulversé par la mort de la Reine Élizabeth II... Il dit avoir un grand respect \
+        pour la monarchie et que vous ne pouvez pas agir contre ses valeurs...",
+        q1: "Selon vous, quelle est l'importance réelle du Roi en tant que chef de l'état canadien?",
+        q2: "Respectez-vous le deuil de votre employé? Est-ce que vous lui laissé le congé?",
+        q3: "Avez-vous déjà eu à \"forcer\" quelqu'un à agir contre ses valeurs/ses volontés? Quelle est la meilleure approche selon vous?"
+        },
     99: {
         situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",
