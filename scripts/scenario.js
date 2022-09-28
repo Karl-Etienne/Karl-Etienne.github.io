@@ -279,6 +279,16 @@ const scenarios = {
         q2: "Respectez-vous le deuil de votre employé? Est-ce que vous lui laissé le congé?",
         q3: "Avez-vous déjà eu à \"forcer\" quelqu'un à agir contre ses valeurs/ses volontés? Quelle est la meilleure approche selon vous?"
         },
+    16: {
+        situation:"Vous êtes coordonateur aux étudiants dans une école secondaire. Vous êtes seul dans votre bureau en train \
+        de consulter vos courriels quand la jeune Océane, 13 ans, entre dans votre bureau en panique. Elle vous confie avoir \
+        eu une relation sexuelle complète non protégée avec un étudiant de 15 ans de la même école... Ses amies l'avaient mise au défi de \"perdre \
+        sa virginité avant ses 14 ans\" (qu'elle fêtera seulement dansgit 1 mois). En absence de ses menstruations, elle a fait un test de \
+        grossesse qui affiche positif... Elle se dit dégoutée à l'idée d'être enceinte et ne pas être prête à devenir maman!",
+        q1: "Selon vous, quelles sont les conséquences principales de la sexualisation précoce chez les jeunes adolescents?",
+        q2: "Contactez-vous les parents d'Océane afin de les mettre au courant? Pourquoi?",
+        q3: "Si Océane avait plutôt été heureuse à l'idée de devenir maman, l'auriez-vous soutenue dans sa démarche? Comment?"
+        },
     99: {
         situation:"Test boboche",
         q1: "Blablabla Mr.Freeman",

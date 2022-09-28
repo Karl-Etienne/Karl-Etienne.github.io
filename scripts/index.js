@@ -5,8 +5,7 @@ function loadContent()
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">10</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">11</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">13</button></a>')
-    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">14</button></a>')
-    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">15</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">16</button></a>')
 
     scenarios = document.getElementById('legacyScenarios')
     
@@ -20,6 +19,8 @@ function loadContent()
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">8</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">9</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">12</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">14</button></a>')
+    scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">15</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">0</button></a>')
     scenarios.insertAdjacentHTML('beforeend', '<a href="scenario.html"><button class="casperProblems" onclick="setScen(this)" onmouseenter="mouseOverEmphasis(this)" onmouseleave="stopMouseOverEmphasis(this)">99</button></a>')
 }
